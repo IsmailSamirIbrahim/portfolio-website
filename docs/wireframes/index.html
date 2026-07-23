@@ -1,0 +1,1094 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Responsive content wireframes for Ismail Samir Ibrahim's portfolio.">
+  <title>PORT-15 â€” Responsive Portfolio Wireframes</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --color-text: #2d2a24;
+      --color-muted: #5f5646;
+      --color-line: #dfd2bf;
+      --color-panel: #eee3d4;
+      --color-paper: #f5efe6;
+      --color-blue: #052e87;
+      --color-orange: #ff8400;
+      --radius-sm: 6px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --radius-xl: 24px;
+      --space-outer: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-width: 320px;
+      margin: 0;
+      color: var(--color-text);
+      background: #e4d7c6;
+      font-family: Urbanist, Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      letter-spacing: .02em;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    a:focus-visible {
+      outline: 3px solid var(--color-blue);
+      outline-offset: 3px;
+    }
+
+    .review-bar {
+      position: sticky;
+      z-index: 50;
+      top: 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      min-height: 58px;
+      padding: 10px var(--space-outer);
+      color: #fff;
+      background: var(--color-text);
+      border-bottom: 1px solid rgba(255, 255, 255, .16);
+    }
+
+    .review-bar p {
+      margin: 0;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+    }
+
+    .review-links {
+      display: flex;
+      gap: 8px;
+    }
+
+    .review-links a {
+      padding: 7px 10px;
+      font-size: 12px;
+      font-weight: 800;
+      text-decoration: none;
+      border: 1px solid rgba(255, 255, 255, .28);
+      border-radius: 999px;
+    }
+
+    .review-links a:hover {
+      background: rgba(255, 255, 255, .12);
+    }
+
+    .wireframe {
+      width: min(100%, 1440px);
+      margin: 0 auto 28px;
+      background: var(--color-paper);
+      box-shadow: 0 18px 60px rgba(45, 42, 36, .12);
+    }
+
+    .wireframe-label {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 9px var(--space-outer);
+      color: var(--color-muted);
+      background: #eadfce;
+      border-bottom: 1px solid var(--color-line);
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+    }
+
+    .site-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      min-height: 76px;
+      padding: 14px var(--space-outer);
+      border-bottom: 1px solid var(--color-line);
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: flex-start;
+      gap: 8px;
+      text-decoration: none;
+    }
+
+    .brand-name {
+      max-width: 122px;
+      font-size: 19px;
+      font-weight: 900;
+      line-height: .94;
+    }
+
+    .brand-tag {
+      display: inline-block;
+      margin-top: 3px;
+      padding: 2px 5px;
+      color: #fff;
+      background: var(--color-blue);
+      font-size: 8px;
+      font-weight: 900;
+      line-height: 1;
+      text-transform: uppercase;
+      transform: rotate(-3deg);
+    }
+
+    .desktop-nav {
+      display: none;
+      align-items: center;
+      gap: 24px;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .desktop-nav a {
+      text-decoration: none;
+    }
+
+    .desktop-nav a:last-child,
+    .button-primary {
+      color: #fff;
+      background: var(--color-orange);
+      border: 0;
+      border-radius: 999px;
+    }
+
+    .desktop-nav a:last-child {
+      padding: 9px 14px;
+    }
+
+    .menu-label {
+      padding: 8px 10px;
+      border: 1px solid var(--color-line);
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .page-shell {
+      width: min(100%, 1240px);
+      margin-inline: auto;
+      padding-inline: var(--space-outer);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin: 0 0 14px;
+      color: var(--color-blue);
+      font-size: 11px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+    }
+
+    .eyebrow::before {
+      width: 22px;
+      height: 2px;
+      content: "";
+      background: currentColor;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1,
+    h2,
+    h3 {
+      letter-spacing: -.025em;
+    }
+
+    .hero {
+      display: grid;
+      align-items: center;
+      min-height: 610px;
+      padding-block: 56px 40px;
+    }
+
+    .hero-copy {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero h1 {
+      max-width: 820px;
+      margin-bottom: 20px;
+      font-size: clamp(42px, 11vw, 76px);
+      font-weight: 950;
+      line-height: .96;
+    }
+
+    .hero-lede {
+      max-width: 690px;
+      margin-bottom: 24px;
+      color: var(--color-muted);
+      font-size: 17px;
+      font-weight: 580;
+      line-height: 1.45;
+    }
+
+    .hero-meta,
+    .button-row,
+    .social-row,
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+    }
+
+    .hero-meta {
+      margin-bottom: 24px;
+    }
+
+    .meta-chip,
+    .tag {
+      padding: 7px 10px;
+      background: #eee3d4;
+      border: 1px solid var(--color-line);
+      border-radius: 999px;
+      color: var(--color-muted);
+      font-size: 11px;
+      font-weight: 800;
+    }
+
+    .button-row a {
+      display: inline-flex;
+      min-height: 42px;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 15px;
+      border: 1px solid var(--color-text);
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 900;
+      text-decoration: none;
+    }
+
+    .button-row .button-primary {
+      border-color: var(--color-orange);
+    }
+
+    .scene-placeholder {
+      min-height: 235px;
+      margin-top: 38px;
+      border: 2px dashed #cdbda6;
+      border-radius: var(--radius-xl);
+      background:
+        linear-gradient(rgba(245, 239, 230, .2), rgba(245, 239, 230, .2)),
+        repeating-linear-gradient(0deg, transparent, transparent 31px, rgba(95, 86, 70, .07) 32px),
+        repeating-linear-gradient(90deg, transparent, transparent 31px, rgba(95, 86, 70, .07) 32px);
+      color: var(--color-muted);
+    }
+
+    .scene-placeholder div {
+      display: grid;
+      min-height: 235px;
+      place-items: center;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .scene-placeholder strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--color-text);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+
+    .section {
+      padding-block: 66px;
+      border-top: 1px solid var(--color-line);
+    }
+
+    .section-heading {
+      display: grid;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+
+    .section h2 {
+      max-width: 720px;
+      margin-bottom: 0;
+      font-size: clamp(34px, 8vw, 58px);
+      font-weight: 950;
+      line-height: .98;
+    }
+
+    .section-intro {
+      max-width: 620px;
+      margin-bottom: 0;
+      color: var(--color-muted);
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .project-grid {
+      display: grid;
+      gap: 14px;
+    }
+
+    .project-card {
+      min-height: 290px;
+      padding: 14px;
+      color: var(--color-text);
+      background: #f9f5ef;
+      border: 1px solid var(--color-line);
+      border-radius: var(--radius-lg);
+      text-decoration: none;
+    }
+
+    .project-visual {
+      display: grid;
+      min-height: 176px;
+      margin-bottom: 15px;
+      place-items: center;
+      overflow: hidden;
+      color: rgba(255, 255, 255, .9);
+      background: var(--color-blue);
+      border-radius: var(--radius-md);
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+    }
+
+    .project-card:nth-child(2) .project-visual {
+      background: #1e5a56;
+    }
+
+    .project-card:nth-child(3) .project-visual {
+      background: #694326;
+    }
+
+    .project-card h3 {
+      margin-bottom: 5px;
+      font-size: 20px;
+      font-weight: 900;
+    }
+
+    .project-card p {
+      margin-bottom: 11px;
+      color: var(--color-muted);
+      font-size: 12px;
+      line-height: 1.4;
+    }
+
+    .card-link {
+      color: var(--color-orange);
+      font-size: 11px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .evidence-grid,
+    .case-grid {
+      display: grid;
+      gap: 16px;
+    }
+
+    .evidence-card,
+    .case-panel {
+      padding: 20px;
+      background: #f9f5ef;
+      border: 1px solid var(--color-line);
+      border-radius: var(--radius-lg);
+    }
+
+    .evidence-card h3,
+    .case-panel h3 {
+      margin-bottom: 10px;
+      font-size: 18px;
+      font-weight: 900;
+    }
+
+    .evidence-card p,
+    .case-panel p,
+    .case-panel li {
+      color: var(--color-muted);
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .evidence-card p:last-child,
+    .case-panel p:last-child {
+      margin-bottom: 0;
+    }
+
+    .skills-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skills-cloud .tag {
+      padding: 10px 13px;
+      color: var(--color-text);
+      background: #f9f5ef;
+      font-size: 12px;
+    }
+
+    .contact-panel {
+      display: grid;
+      gap: 28px;
+      min-height: 360px;
+      align-content: center;
+      padding-block: 74px;
+    }
+
+    .contact-panel h2 {
+      max-width: 560px;
+    }
+
+    .contact-copy {
+      max-width: 560px;
+      color: var(--color-muted);
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .social-row a {
+      padding: 9px 12px;
+      border: 1px solid var(--color-line);
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 900;
+      text-decoration: none;
+    }
+
+    .site-footer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 24px var(--space-outer);
+      color: var(--color-muted);
+      border-top: 1px solid var(--color-line);
+      font-size: 10px;
+    }
+
+    .site-footer nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .case-hero {
+      display: grid;
+      gap: 32px;
+      padding-block: 54px 44px;
+    }
+
+    .breadcrumb {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 28px;
+      color: var(--color-muted);
+      font-size: 11px;
+      font-weight: 800;
+    }
+
+    .case-hero h1 {
+      max-width: 900px;
+      margin-bottom: 18px;
+      font-size: clamp(46px, 12vw, 88px);
+      font-weight: 950;
+      line-height: .94;
+    }
+
+    .case-summary {
+      max-width: 700px;
+      margin-bottom: 24px;
+      color: var(--color-muted);
+      font-size: 17px;
+      line-height: 1.48;
+    }
+
+    .case-cover {
+      display: grid;
+      min-height: 330px;
+      place-items: center;
+      color: rgba(255, 255, 255, .86);
+      background: var(--color-blue);
+      border-radius: var(--radius-xl);
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+    }
+
+    .case-grid {
+      align-items: start;
+    }
+
+    .case-panel ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .case-panel li + li {
+      margin-top: 8px;
+    }
+
+    .wide-panel {
+      grid-column: 1 / -1;
+    }
+
+    .decision-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .decision {
+      padding: 14px;
+      background: var(--color-panel);
+      border-radius: var(--radius-md);
+    }
+
+    .decision strong {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 13px;
+    }
+
+    .decision p {
+      margin-bottom: 0;
+    }
+
+    .media-row {
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .media-placeholder {
+      display: grid;
+      min-height: 180px;
+      place-items: center;
+      background: #e8dccb;
+      border: 1px dashed #bca98d;
+      border-radius: var(--radius-md);
+      color: var(--color-muted);
+      font-size: 11px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .next-project {
+      display: grid;
+      gap: 16px;
+      align-items: center;
+      min-height: 250px;
+      padding-block: 56px;
+      border-top: 1px solid var(--color-line);
+    }
+
+    .next-project h2 {
+      margin-bottom: 0;
+      font-size: clamp(36px, 8vw, 64px);
+      font-weight: 950;
+      line-height: .98;
+    }
+
+    .next-project a {
+      justify-self: start;
+      padding: 11px 16px;
+      color: #fff;
+      background: var(--color-orange);
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 900;
+      text-decoration: none;
+    }
+
+    .fallback-note {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      margin-top: 22px;
+      padding: 13px;
+      color: var(--color-muted);
+      background: #eee3d4;
+      border: 1px solid var(--color-line);
+      border-radius: var(--radius-md);
+      font-size: 11px;
+      line-height: 1.45;
+    }
+
+    .fallback-note strong {
+      color: var(--color-text);
+    }
+
+    @media (min-width: 680px) {
+      :root {
+        --space-outer: 28px;
+      }
+
+      .project-grid,
+      .evidence-grid,
+      .case-grid,
+      .media-row {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .project-card:first-child {
+        grid-column: span 2;
+      }
+
+      .contact-panel,
+      .next-project {
+        grid-template-columns: minmax(0, 1.4fr) minmax(260px, .6fr);
+      }
+
+      .contact-actions {
+        align-self: center;
+      }
+    }
+
+    @media (min-width: 840px) {
+      :root {
+        --space-outer: 44px;
+      }
+
+      .wireframe {
+        margin-top: 28px;
+        border-radius: 28px;
+        overflow: clip;
+      }
+
+      .desktop-nav {
+        display: flex;
+      }
+
+      .menu-label {
+        display: none;
+      }
+
+      .hero {
+        grid-template-columns: minmax(0, 1.08fr) minmax(360px, .92fr);
+        gap: 48px;
+        min-height: 840px;
+        padding-block: 96px;
+      }
+
+      .hero h1 {
+        max-width: 760px;
+        font-size: clamp(62px, 6vw, 84px);
+      }
+
+      .scene-placeholder {
+        min-height: 560px;
+        margin-top: 0;
+      }
+
+      .scene-placeholder div {
+        min-height: 560px;
+      }
+
+      .section {
+        padding-block: 92px;
+      }
+
+      .section-heading {
+        grid-template-columns: minmax(0, 1fr) minmax(320px, .75fr);
+        align-items: end;
+        gap: 48px;
+        margin-bottom: 42px;
+      }
+
+      .project-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .project-card:first-child {
+        grid-column: auto;
+      }
+
+      .evidence-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .case-hero {
+        grid-template-columns: minmax(0, .9fr) minmax(420px, 1.1fr);
+        align-items: center;
+        gap: 56px;
+        min-height: 720px;
+        padding-block: 72px;
+      }
+
+      .case-cover {
+        min-height: 540px;
+      }
+
+      .case-grid {
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+      }
+
+      .case-panel {
+        grid-column: span 6;
+      }
+
+      .case-panel.narrow {
+        grid-column: span 4;
+      }
+
+      .wide-panel {
+        grid-column: 1 / -1;
+      }
+
+      .media-row {
+        grid-template-columns: 1.35fr .65fr;
+      }
+
+      .media-placeholder {
+        min-height: 310px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <aside class="review-bar" aria-label="Wireframe review navigation">
+    <p>PORT-15 Â· Responsive content wireframe</p>
+    <nav class="review-links" aria-label="Jump to a wireframe">
+      <a href="#homepage">Homepage</a>
+      <a href="#case-study">Case study</a>
+    </nav>
+  </aside>
+
+  <article class="wireframe" id="homepage" aria-labelledby="homepage-label">
+    <div class="wireframe-label">
+      <span id="homepage-label">Wireframe A Â· Homepage</span>
+      <span>Responsive: 320â€“1440+</span>
+    </div>
+
+    <header class="site-header">
+      <a class="brand" href="#homepage" aria-label="Ismail Samir Ibrahim, homepage">
+        <span class="brand-name">Ismail Samir Ibrahim</span>
+        <span class="brand-tag">Senior C++ Engineer</span>
+      </a>
+      <nav class="desktop-nav" aria-label="Homepage navigation">
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Get in touch</a>
+      </nav>
+      <span class="menu-label" aria-hidden="true">Menu</span>
+    </header>
+
+    <main>
+      <section class="hero page-shell" aria-labelledby="hero-heading">
+        <div class="hero-copy">
+          <p class="eyebrow">Cairo, Egypt Â· Available for selected work</p>
+          <h1 id="hero-heading">Building high-performance software where precision matters.</h1>
+          <p class="hero-lede">Senior C++ Software Engineer with 8+ years of experience across medical imaging, dental AI, and Arabic NLPâ€”turning complex systems into dependable products.</p>
+          <div class="hero-meta" aria-label="Primary specialties">
+            <span class="meta-chip">Modern C++</span>
+            <span class="meta-chip">Qt / QML</span>
+            <span class="meta-chip">Architecture</span>
+            <span class="meta-chip">Performance</span>
+          </div>
+          <div class="button-row">
+            <a class="button-primary" href="#projects">Explore my work</a>
+            <a href="mailto:ismail.samir.ibrahim@gmail.com">Get in touch</a>
+          </div>
+          <div class="fallback-note">
+            <span aria-hidden="true">â—‡</span>
+            <span><strong>2D-first fallback:</strong> this complete content path remains available when WebGL, motion, or audio is unsupported or disabled.</span>
+          </div>
+        </div>
+        <div class="scene-placeholder" aria-label="Optional immersive scene region">
+          <div>
+            <span><strong>Optional immersive layer</strong>Original engineering room + fictional character<br>Lazy-loaded after useful HTML content</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="projects" aria-labelledby="projects-heading">
+        <div class="page-shell">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Selected projects</p>
+              <h2 id="projects-heading">Engineering, explored in depth.</h2>
+            </div>
+            <p class="section-intro">Each case study makes the problem, Ismailâ€™s role, technical decisions, and verifiable outcome easy to scan before opening the repository.</p>
+          </div>
+          <div class="project-grid">
+            <a class="project-card" href="#case-study">
+              <div class="project-visual">Project media Â· Immagine</div>
+              <h3>Immagine</h3>
+              <p>Desktop image-processing application Â· C++ Â· Qt/QML</p>
+              <span class="card-link">Read case study â†’</span>
+            </a>
+            <a class="project-card" href="#case-study">
+              <div class="project-visual">Project media Â· Breakout</div>
+              <h3>Breakout Game</h3>
+              <p>Real-time game architecture Â· C++ Â· Rendering</p>
+              <span class="card-link">Read case study â†’</span>
+            </a>
+            <a class="project-card" href="#case-study">
+              <div class="project-visual">Project media Â· Thread Pool</div>
+              <h3>Thread Pool</h3>
+              <p>Concurrency and task scheduling Â· Modern C++</p>
+              <span class="card-link">Read case study â†’</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="experience" aria-labelledby="experience-heading">
+        <div class="page-shell">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Experience evidence</p>
+              <h2 id="experience-heading">Production thinking, from architecture to delivery.</h2>
+            </div>
+            <p class="section-intro">A short, outcome-focused rÃ©sumÃ© path gives hiring teams useful evidence without forcing them to download the CV first.</p>
+          </div>
+          <div class="evidence-grid">
+            <article class="evidence-card">
+              <h3>Technical leadership</h3>
+              <p>Architecture, mentoring, review practices, and dependable delivery across multidisciplinary product teams.</p>
+            </article>
+            <article class="evidence-card">
+              <h3>MedTech production</h3>
+              <p>Performance-sensitive desktop workflows involving medical imaging and production dental AI.</p>
+            </article>
+            <article class="evidence-card">
+              <h3>Quality systems</h3>
+              <p>Testing, CI/CD, observability, and maintainable engineering practices presented with verified outcomes.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="skills" aria-labelledby="skills-heading">
+        <div class="page-shell">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Capabilities</p>
+              <h2 id="skills-heading">Tools selected for the problem.</h2>
+            </div>
+            <p class="section-intro">Compact skill groups support quick recruiter scanning while the case studies provide proof and context.</p>
+          </div>
+          <div class="skills-cloud" aria-label="Skills list">
+            <span class="tag">Modern C++</span>
+            <span class="tag">Qt / QML</span>
+            <span class="tag">Multithreading</span>
+            <span class="tag">System architecture</span>
+            <span class="tag">Performance optimization</span>
+            <span class="tag">Testing</span>
+            <span class="tag">CMake</span>
+            <span class="tag">GitHub Actions</span>
+            <span class="tag">Linux</span>
+            <span class="tag">Windows</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-shell contact-panel" id="contact" aria-labelledby="contact-heading">
+        <div>
+          <p class="eyebrow">Collaboration</p>
+          <h2 id="contact-heading">Letâ€™s build dependable software together.</h2>
+          <p class="contact-copy">Open to senior software engineering opportunities and selected freelance collaborations involving C++, desktop applications, performance-critical systems, and architecture.</p>
+        </div>
+        <div class="contact-actions">
+          <div class="button-row">
+            <a class="button-primary" href="mailto:ismail.samir.ibrahim@gmail.com">Email Ismail</a>
+            <a href="#" aria-label="Download rÃ©sumÃ© placeholder">RÃ©sumÃ©</a>
+          </div>
+          <div class="social-row" aria-label="Professional profiles" style="margin-top: 12px">
+            <a href="https://github.com/IsmailSamirIbrahim">GitHub</a>
+            <a href="https://www.linkedin.com/in/ismailsamiribrahim">LinkedIn</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Â© Ismail Samir Ibrahim Â· Cairo, Egypt</span>
+      <nav aria-label="Legal navigation">
+        <a href="#">Privacy</a>
+        <a href="#">Legal</a>
+        <a href="#">Credits</a>
+        <a href="#homepage">Back to top â†‘</a>
+      </nav>
+    </footer>
+  </article>
+
+  <article class="wireframe" id="case-study" aria-labelledby="case-study-label">
+    <div class="wireframe-label">
+      <span id="case-study-label">Wireframe B Â· Reusable case study</span>
+      <span>Responsive: 320â€“1440+</span>
+    </div>
+
+    <header class="site-header">
+      <a class="brand" href="#homepage" aria-label="Return to Ismail's homepage">
+        <span class="brand-name">Ismail Samir Ibrahim</span>
+        <span class="brand-tag">Senior C++ Engineer</span>
+      </a>
+      <nav class="desktop-nav" aria-label="Case-study navigation">
+        <a href="#projects">All projects</a>
+        <a href="#case-overview">Overview</a>
+        <a href="#case-decisions">Decisions</a>
+        <a href="mailto:ismail.samir.ibrahim@gmail.com">Get in touch</a>
+      </nav>
+      <span class="menu-label" aria-hidden="true">Menu</span>
+    </header>
+
+    <main>
+      <section class="case-hero page-shell" aria-labelledby="case-title">
+        <div>
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="#homepage">Home</a>
+            <span aria-hidden="true">/</span>
+            <a href="#projects">Projects</a>
+            <span aria-hidden="true">/</span>
+            <span>Immagine</span>
+          </nav>
+          <p class="eyebrow">Featured project Â· Desktop software</p>
+          <h1 id="case-title">Immagine</h1>
+          <p class="case-summary">A focused introduction states what the product is, the problem it explores, and Ismailâ€™s contribution before the visitor reaches implementation details.</p>
+          <div class="tag-list" aria-label="Project technologies">
+            <span class="tag">C++</span>
+            <span class="tag">Qt / QML</span>
+            <span class="tag">Image processing</span>
+          </div>
+          <div class="button-row" style="margin-top: 24px">
+            <a class="button-primary" href="https://github.com/IsmailSamirIbrahim/Immagine">View repository</a>
+            <a href="#case-overview">Read the story</a>
+          </div>
+        </div>
+        <div class="case-cover">Primary project media Â· 16:10 or 4:3</div>
+      </section>
+
+      <section class="section" id="case-overview" aria-labelledby="case-overview-heading">
+        <div class="page-shell">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Project story</p>
+              <h2 id="case-overview-heading">Context before implementation.</h2>
+            </div>
+            <p class="section-intro">The template distinguishes verified facts from goals or learning outcomes and never invents performance claims.</p>
+          </div>
+          <div class="case-grid">
+            <article class="case-panel narrow">
+              <h3>Problem</h3>
+              <p>What user or engineering problem needed to be solved, and why it mattered.</p>
+            </article>
+            <article class="case-panel narrow">
+              <h3>Role</h3>
+              <p>Ismailâ€™s ownership, constraints, collaboration, and responsibilities.</p>
+            </article>
+            <article class="case-panel narrow">
+              <h3>Outcome</h3>
+              <p>Observable, repository-supported results without inflated claims.</p>
+            </article>
+            <article class="case-panel wide-panel">
+              <h3>Technical approach</h3>
+              <p>A readable architecture narrative explains the components, data flow, trade-offs, and testing strategy. A diagram can replace this placeholder when it adds clarity.</p>
+              <div class="media-row">
+                <div class="media-placeholder">Architecture or workflow diagram</div>
+                <div class="media-placeholder">Annotated UI detail</div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="case-decisions" aria-labelledby="case-decisions-heading">
+        <div class="page-shell">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Engineering depth</p>
+              <h2 id="case-decisions-heading">Key decisions and trade-offs.</h2>
+            </div>
+            <p class="section-intro">This section gives technical reviewers a direct path to the reasoning that cannot be inferred from screenshots alone.</p>
+          </div>
+          <div class="case-grid">
+            <article class="case-panel">
+              <h3>Decision log</h3>
+              <div class="decision-list">
+                <div class="decision">
+                  <strong>01 Â· Architecture choice</strong>
+                  <p>Decision, alternatives considered, and why the selected approach fit the constraints.</p>
+                </div>
+                <div class="decision">
+                  <strong>02 Â· Performance strategy</strong>
+                  <p>Measured bottleneck, implementation response, and how the result was verified.</p>
+                </div>
+                <div class="decision">
+                  <strong>03 Â· Quality strategy</strong>
+                  <p>Testing boundaries, failure handling, and maintainability considerations.</p>
+                </div>
+              </div>
+            </article>
+            <article class="case-panel">
+              <h3>Technology and evidence</h3>
+              <ul>
+                <li>Language, framework, build system, and platform.</li>
+                <li>Repository links to important implementation areas.</li>
+                <li>Testing and verification methods.</li>
+                <li>Known limitations and honest next steps.</li>
+              </ul>
+              <div class="fallback-note">
+                <span aria-hidden="true">â—‡</span>
+                <span><strong>No canvas dependency:</strong> all project text, media, repository actions, and next-project navigation remain standard accessible HTML.</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-shell next-project" aria-labelledby="next-project-heading">
+        <div>
+          <p class="eyebrow">Continue exploring</p>
+          <h2 id="next-project-heading">Next: Breakout Game</h2>
+        </div>
+        <a href="#case-study">Next project â†’</a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Case-study template Â· Ismail Samir Ibrahim</span>
+      <nav aria-label="Case-study footer navigation">
+        <a href="#projects">All projects</a>
+        <a href="mailto:ismail.samir.ibrahim@gmail.com">Contact</a>
+        <a href="#case-study">Back to top â†‘</a>
+      </nav>
+    </footer>
+  </article>
+</body>
+</html>
+
