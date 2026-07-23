@@ -1,0 +1,140 @@
+{
+  "version": 1,
+  "notes": [
+    "All repository media is tied to an immutable source commit.",
+    "No verified project video was available in the reviewed repositories.",
+    "The Thread Pool cover is a source-derived architecture diagram, not a benchmark visualization."
+  ],
+  "assets": [
+    {
+      "alt": "A black-and-white input image beside the same connected components rendered in distinct colors.",
+      "height": 750,
+      "path": "/media/projects/immagine/cover.webp",
+      "project": "Immagine",
+      "source": {
+        "commit": "c7c9713d28407d7baf36e9766a249b4a1a693b77",
+        "files": [
+          "images/black_and_white.jpg",
+          "images/colored.png"
+        ],
+        "repository": "https://github.com/IsmailSamirIbrahim/Immagine",
+        "type": "repository composite"
+      },
+      "usage": "cover",
+      "width": 1200
+    },
+    {
+      "alt": "Black-and-white shapes used as input for connected-component labeling.",
+      "height": 708,
+      "path": "/media/projects/immagine/connected-components-input.webp",
+      "project": "Immagine",
+      "source": {
+        "commit": "c7c9713d28407d7baf36e9766a249b4a1a693b77",
+        "files": [
+          "images/black_and_white.jpg"
+        ],
+        "repository": "https://github.com/IsmailSamirIbrahim/Immagine",
+        "type": "repository image"
+      },
+      "usage": "case study",
+      "width": 1000
+    },
+    {
+      "alt": "Connected image components rendered in different colors after labeling.",
+      "height": 708,
+      "path": "/media/projects/immagine/connected-components-output.webp",
+      "project": "Immagine",
+      "source": {
+        "commit": "c7c9713d28407d7baf36e9766a249b4a1a693b77",
+        "files": [
+          "images/colored.png"
+        ],
+        "repository": "https://github.com/IsmailSamirIbrahim/Immagine",
+        "type": "repository image"
+      },
+      "usage": "case study",
+      "width": 1000
+    },
+    {
+      "alt": "Portrait after the Immagine Gaussian blur example.",
+      "height": 512,
+      "path": "/media/projects/immagine/gaussian-blur-output.webp",
+      "project": "Immagine",
+      "source": {
+        "commit": "c7c9713d28407d7baf36e9766a249b4a1a693b77",
+        "files": [
+          "images/blured_image.png"
+        ],
+        "repository": "https://github.com/IsmailSamirIbrahim/Immagine",
+        "type": "repository image"
+      },
+      "usage": "case study",
+      "width": 512
+    },
+    {
+      "alt": "Breakout gameplay with a paddle, ball, multicolored brick rows, and three remaining lives.",
+      "height": 750,
+      "path": "/media/projects/breakout-game/cover.webp",
+      "project": "Breakout Game",
+      "source": {
+        "commit": "b2ddc413a39cfd677d585f2d9968262a53b2165d",
+        "files": [
+          "images/Game.PNG"
+        ],
+        "repository": "https://github.com/IsmailSamirIbrahim/Breakout-Game",
+        "type": "repository image with neutral frame"
+      },
+      "usage": "cover",
+      "width": 1200
+    },
+    {
+      "alt": "Breakout start menu with Play and Exit keyboard instructions.",
+      "height": 633,
+      "path": "/media/projects/breakout-game/menu.webp",
+      "project": "Breakout Game",
+      "source": {
+        "commit": "b2ddc413a39cfd677d585f2d9968262a53b2165d",
+        "files": [
+          "images/Menu.PNG"
+        ],
+        "repository": "https://github.com/IsmailSamirIbrahim/Breakout-Game",
+        "type": "repository image"
+      },
+      "usage": "case study",
+      "width": 901
+    },
+    {
+      "alt": "Breakout gameplay showing the paddle returning a ball toward rows of bricks.",
+      "height": 636,
+      "path": "/media/projects/breakout-game/gameplay.webp",
+      "project": "Breakout Game",
+      "source": {
+        "commit": "b2ddc413a39cfd677d585f2d9968262a53b2165d",
+        "files": [
+          "images/Game.PNG"
+        ],
+        "repository": "https://github.com/IsmailSamirIbrahim/Breakout-Game",
+        "type": "repository image"
+      },
+      "usage": "case study",
+      "width": 904
+    },
+    {
+      "alt": "Diagram showing submitted callables entering a shared task queue and being distributed to three worker threads.",
+      "height": 750,
+      "path": "/media/projects/thread-pool/cover.webp",
+      "project": "Thread Pool",
+      "source": {
+        "commit": "79821cd02e40c4694302762b120e48364164732c",
+        "files": [
+          "thread_pool/include/pool/Thread_Pool.h",
+          "thread_pool/include/pool/Queue.h"
+        ],
+        "repository": "https://github.com/IsmailSamirIbrahim/Thread-Pool",
+        "type": "source-derived diagram"
+      },
+      "usage": "cover",
+      "width": 1200
+    }
+  ]
+}

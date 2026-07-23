@@ -15,6 +15,9 @@ const emit = defineEmits<{
 
 const projects = [
   {
+    cover: '/media/projects/immagine/cover.webp',
+    coverAlt:
+      'A black-and-white input image beside the same connected components rendered in distinct colors.',
     description:
       'A lightweight C++ library for image I/O, transformations, filtering, and segmentation.',
     href: 'https://github.com/IsmailSamirIbrahim/Immagine',
@@ -22,12 +25,18 @@ const projects = [
     technology: 'C++17 · CMake · stb · Image processing',
   },
   {
+    cover: '/media/projects/breakout-game/cover.webp',
+    coverAlt:
+      'Breakout gameplay with a paddle, ball, multicolored brick rows, and three remaining lives.',
     description: 'A real-time game project exploring rendering and game structure.',
     href: 'https://github.com/IsmailSamirIbrahim/Breakout-Game',
     name: 'Breakout Game',
     technology: 'C++ · Real-time systems · Rendering',
   },
   {
+    cover: '/media/projects/thread-pool/cover.webp',
+    coverAlt:
+      'Diagram showing submitted callables entering a shared task queue and being distributed to three worker threads.',
     description:
       'A compact worker pool with queued callables, condition-variable wakeups, and future-based results.',
     href: 'https://github.com/IsmailSamirIbrahim/Thread-Pool',
@@ -119,9 +128,15 @@ const projects = [
         </div>
         <div class="project-grid">
           <article v-for="project in projects" :key="project.name" class="project-card">
-            <div class="project-card__media" aria-hidden="true">
-              {{ project.name }}
-            </div>
+            <img
+              class="project-card__media"
+              :src="project.cover"
+              :alt="project.coverAlt"
+              width="1200"
+              height="750"
+              loading="lazy"
+              decoding="async"
+            >
             <h3>{{ project.name }}</h3>
             <p>{{ project.description }}</p>
             <small>{{ project.technology }}</small>

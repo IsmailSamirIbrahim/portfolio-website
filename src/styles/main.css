@@ -275,25 +275,14 @@ h1 {
 }
 
 .project-card__media {
-  display: grid;
-  min-height: 180px;
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 8 / 5;
   margin-bottom: 16px;
-  place-items: center;
-  color: #fff;
   background: var(--blue);
   border-radius: 12px;
-  font-size: 11px;
-  font-weight: 900;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.project-card:nth-child(2) .project-card__media {
-  background: #1e5a56;
-}
-
-.project-card:nth-child(3) .project-card__media {
-  background: #694326;
+  object-fit: cover;
 }
 
 .project-card h3 {
