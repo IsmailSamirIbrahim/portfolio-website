@@ -15,10 +15,11 @@ const emit = defineEmits<{
 
 const projects = [
   {
-    description: 'A desktop image-processing application built with C++ and Qt.',
+    description:
+      'A lightweight C++ library for image I/O, transformations, filtering, and segmentation.',
     href: 'https://github.com/IsmailSamirIbrahim/Immagine',
     name: 'Immagine',
-    technology: 'C++ · Qt/QML · Image processing',
+    technology: 'C++17 · CMake · stb · Image processing',
   },
   {
     description: 'A real-time game project exploring rendering and game structure.',
@@ -27,10 +28,11 @@ const projects = [
     technology: 'C++ · Real-time systems · Rendering',
   },
   {
-    description: 'A focused modern C++ implementation of concurrent task scheduling.',
+    description:
+      'A compact worker pool with queued callables, condition-variable wakeups, and future-based results.',
     href: 'https://github.com/IsmailSamirIbrahim/Thread-Pool',
     name: 'Thread Pool',
-    technology: 'Modern C++ · Concurrency · Scheduling',
+    technology: 'C++ · Threads · Futures · Scheduling',
   },
 ] as const
 </script>
