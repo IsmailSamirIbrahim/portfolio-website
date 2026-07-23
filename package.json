@@ -2,6 +2,11 @@
   "name": "ismail-samir-portfolio",
   "private": true,
   "version": "0.1.0",
+  "packageManager": "npm@11.10.0",
+  "engines": {
+    "node": "24.13.x",
+    "npm": "11.10.x"
+  },
   "type": "module",
   "scripts": {
     "design:check": "node scripts/check-design-contrast.mjs",
@@ -9,7 +14,9 @@
     "type-check": "vue-tsc --build",
     "build": "npm run type-check && vite build",
     "media:generate": "node scripts/generate-project-media.mjs",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "verify:secrets": "node scripts/check-secrets.mjs",
+    "verify": "npm run verify:secrets && npm run design:check && npm run build"
   },
   "dependencies": {
     "vue": "^3.5.40"
