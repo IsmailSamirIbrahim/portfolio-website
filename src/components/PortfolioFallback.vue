@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import HeroIntroduction from '@/components/HeroIntroduction.vue'
 import SiteFooter from '@/components/SiteFooter.vue'
 import SiteHeader from '@/components/SiteHeader.vue'
 import { portfolioContent } from '@/content/portfolio'
@@ -26,59 +27,14 @@ const projects = portfolioContent.projects
     <SiteHeader />
 
     <main id="main-content">
-      <section id="top" class="hero">
-        <div class="hero__copy">
-          <p class="eyebrow">Cairo, Egypt · Open to opportunities</p>
-          <h1>Building high-performance software where precision matters.</h1>
-          <p class="hero__lede">
-            I’m Ismail, a Senior C++ Software Engineer with 8+ years of
-            experience building production software across dental AI, medical
-            imaging, and Arabic NLP.
-          </p>
-          <div class="action-row">
-            <a class="button button--primary" href="#projects">Explore my work</a>
-            <a class="button" href="mailto:ismail.samir.ibrahim@gmail.com">
-              Get in touch
-            </a>
-          </div>
-        </div>
-
-        <aside class="experience-switch" aria-labelledby="experience-switch-title">
-          <p id="experience-switch-title" class="experience-switch__title">
-            Optional immersive layer
-          </p>
-          <p>
-            The complete portfolio is always available as accessible HTML. The
-            future 3D room loads only when requested and supported.
-          </p>
-          <button
-            v-if="!immersiveActive"
-            class="button button--compact"
-            type="button"
-            :disabled="immersivePhase === 'loading'"
-            @click="emit('requestImmersive')"
-          >
-            {{
-              immersivePhase === 'loading'
-                ? 'Loading…'
-                : webGLAvailable
-                  ? 'Preview immersive layer'
-                  : '3D unavailable'
-            }}
-          </button>
-          <button
-            v-else
-            class="button button--compact"
-            type="button"
-            @click="emit('disableImmersive')"
-          >
-            Use 2D only
-          </button>
-          <p class="status-message" aria-live="polite">
-            {{ immersiveStatus }}
-          </p>
-        </aside>
-      </section>
+      <HeroIntroduction
+        :immersive-active="immersiveActive"
+        :immersive-phase="immersivePhase"
+        :immersive-status="immersiveStatus"
+        :web-g-l-available="webGLAvailable"
+        @disable-immersive="emit('disableImmersive')"
+        @request-immersive="emit('requestImmersive')"
+      />
 
       <section id="projects" class="content-section">
         <p class="eyebrow">Selected projects</p>
