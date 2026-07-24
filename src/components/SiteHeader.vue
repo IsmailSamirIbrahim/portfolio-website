@@ -40,10 +40,14 @@ onBeforeUnmount(() => {
 
 <template>
   <header class="site-header">
-    <a class="wordmark" href="#top" aria-label="Ismail Samir Ibrahim, home">
+    <RouterLink
+      class="wordmark"
+      to="/#top"
+      aria-label="Ismail Samir Ibrahim, home"
+    >
       <strong>Ismail Samir Ibrahim</strong>
       <span>Senior C++ Engineer</span>
-    </a>
+    </RouterLink>
 
     <button
       ref="menuButton"
@@ -62,9 +66,11 @@ onBeforeUnmount(() => {
       aria-label="Primary navigation"
       @click="closeMenu"
     >
-      <a href="#projects">Projects</a>
-      <a href="#expertise">Expertise</a>
-      <a class="primary-navigation__contact" href="#contact">Get in touch</a>
+      <RouterLink to="/#projects">Projects</RouterLink>
+      <RouterLink to="/#expertise">Expertise</RouterLink>
+      <RouterLink class="primary-navigation__contact" to="/#contact">
+        Get in touch
+      </RouterLink>
     </nav>
   </header>
 </template>
