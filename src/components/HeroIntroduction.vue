@@ -50,8 +50,12 @@ const emit = defineEmits<{
       </div>
     </div>
 
-    <aside class="hero__stage" aria-label="Engineering profile">
-      <div class="hero__blueprint" aria-hidden="true">
+    <aside
+      class="hero__stage"
+      :class="{ 'hero__stage--immersive': immersiveActive }"
+      aria-label="Engineering profile"
+    >
+      <div v-if="!immersiveActive" class="hero__blueprint" aria-hidden="true">
         <span class="hero__blueprint-label">Engineering systems</span>
         <strong>C++</strong>
         <div class="hero__blueprint-orbit">

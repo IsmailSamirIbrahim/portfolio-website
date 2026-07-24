@@ -440,7 +440,14 @@ onBeforeUnmount(() => {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgb(245 239 230 / 52%), transparent 24% 75%, rgb(245 239 230 / 38%)),
+    linear-gradient(
+      90deg,
+      rgb(245 239 230 / 96%) 0%,
+      rgb(245 239 230 / 90%) 28%,
+      rgb(245 239 230 / 35%) 58%,
+      rgb(245 239 230 / 28%) 75%,
+      rgb(245 239 230 / 62%) 100%
+    ),
     linear-gradient(0deg, rgb(245 239 230 / 78%), transparent 38%);
   pointer-events: none;
 }

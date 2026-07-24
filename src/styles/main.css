@@ -491,6 +491,11 @@ h1 {
   backdrop-filter: blur(10px);
 }
 
+.hero__stage--immersive {
+  align-self: end;
+  background: rgba(245, 239, 230, 0.72);
+}
+
 .hero__blueprint {
   position: relative;
   display: grid;
