@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import SiteFooter from '@/components/SiteFooter.vue'
 import SiteHeader from '@/components/SiteHeader.vue'
+import { portfolioContent } from '@/content/portfolio'
 import type { ImmersivePhase } from '@/types/immersive'
 
 defineProps<{
@@ -15,37 +16,7 @@ const emit = defineEmits<{
   requestImmersive: []
 }>()
 
-const projects = [
-  {
-    cover: '/media/projects/immagine/cover.webp',
-    coverAlt:
-      'A black-and-white input image beside the same connected components rendered in distinct colors.',
-    description:
-      'A lightweight C++ library for image I/O, transformations, filtering, and segmentation.',
-    href: 'https://github.com/IsmailSamirIbrahim/Immagine',
-    name: 'Immagine',
-    technology: 'C++17 · CMake · stb · Image processing',
-  },
-  {
-    cover: '/media/projects/breakout-game/cover.webp',
-    coverAlt:
-      'Breakout gameplay with a paddle, ball, multicolored brick rows, and three remaining lives.',
-    description: 'A real-time game project exploring rendering and game structure.',
-    href: 'https://github.com/IsmailSamirIbrahim/Breakout-Game',
-    name: 'Breakout Game',
-    technology: 'C++ · Real-time systems · Rendering',
-  },
-  {
-    cover: '/media/projects/thread-pool/cover.webp',
-    coverAlt:
-      'Diagram showing submitted callables entering a shared task queue and being distributed to three worker threads.',
-    description:
-      'A compact worker pool with queued callables, condition-variable wakeups, and future-based results.',
-    href: 'https://github.com/IsmailSamirIbrahim/Thread-Pool',
-    name: 'Thread Pool',
-    technology: 'C++ · Threads · Futures · Scheduling',
-  },
-] as const
+const projects = portfolioContent.projects
 </script>
 
 <template>
@@ -122,17 +93,17 @@ const projects = [
           <article v-for="project in projects" :key="project.name" class="project-card">
             <img
               class="project-card__media"
-              :src="project.cover"
-              :alt="project.coverAlt"
-              width="1200"
-              height="750"
+              :src="project.cover.src"
+              :alt="project.cover.alt"
+              :width="project.cover.width"
+              :height="project.cover.height"
               loading="lazy"
               decoding="async"
             >
             <h3>{{ project.name }}</h3>
-            <p>{{ project.description }}</p>
-            <small>{{ project.technology }}</small>
-            <a :href="project.href">View repository →</a>
+            <p>{{ project.summary }}</p>
+            <small>{{ project.technologySummary }}</small>
+            <a :href="project.repository">View repository →</a>
           </article>
         </div>
       </section>
