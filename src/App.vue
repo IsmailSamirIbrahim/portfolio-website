@@ -36,7 +36,11 @@ const {
           @ready="markReady"
         />
         <template #fallback>
-          <div class="immersive-loading" aria-hidden="true" />
+          <div class="immersive-loading" role="status" aria-live="polite">
+            <span class="visually-hidden">
+              Loading the optional immersive experience.
+            </span>
+          </div>
         </template>
       </Suspense>
     </Transition>

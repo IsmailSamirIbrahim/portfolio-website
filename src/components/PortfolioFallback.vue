@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import SiteFooter from '@/components/SiteFooter.vue'
+import SiteHeader from '@/components/SiteHeader.vue'
 import type { ImmersivePhase } from '@/types/immersive'
 
 defineProps<{
@@ -50,17 +52,7 @@ const projects = [
   <div class="portfolio-shell">
     <a class="skip-link" href="#main-content">Skip to main content</a>
 
-    <header class="site-header">
-      <a class="wordmark" href="#top" aria-label="Ismail Samir Ibrahim, home">
-        <strong>Ismail Samir Ibrahim</strong>
-        <span>Senior C++ Engineer</span>
-      </a>
-      <nav aria-label="Primary navigation">
-        <a href="#projects">Projects</a>
-        <a href="#expertise">Expertise</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
+    <SiteHeader />
 
     <main id="main-content">
       <section id="top" class="hero">
@@ -173,9 +165,6 @@ const projects = [
       </section>
     </main>
 
-    <footer>
-      <span>© Ismail Samir Ibrahim</span>
-      <a href="#top">Back to top ↑</a>
-    </footer>
+    <SiteFooter />
   </div>
 </template>
