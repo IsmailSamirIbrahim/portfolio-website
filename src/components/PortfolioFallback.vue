@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import HeroIntroduction from '@/components/HeroIntroduction.vue'
+import ProjectShowcase from '@/components/ProjectShowcase.vue'
 import SiteFooter from '@/components/SiteFooter.vue'
 import SiteHeader from '@/components/SiteHeader.vue'
 import { portfolioContent } from '@/content/portfolio'
@@ -36,33 +37,7 @@ const projects = portfolioContent.projects
         @request-immersive="emit('requestImmersive')"
       />
 
-      <section id="projects" class="content-section">
-        <p class="eyebrow">Selected projects</p>
-        <div class="section-heading">
-          <h2>Engineering, explored in depth.</h2>
-          <p>
-            Three focused projects introduce the problem, implementation choices,
-            and source code without requiring WebGL.
-          </p>
-        </div>
-        <div class="project-grid">
-          <article v-for="project in projects" :key="project.name" class="project-card">
-            <img
-              class="project-card__media"
-              :src="project.cover.src"
-              :alt="project.cover.alt"
-              :width="project.cover.width"
-              :height="project.cover.height"
-              loading="lazy"
-              decoding="async"
-            >
-            <h3>{{ project.name }}</h3>
-            <p>{{ project.summary }}</p>
-            <small>{{ project.technologySummary }}</small>
-            <a :href="project.repository">View repository →</a>
-          </article>
-        </div>
-      </section>
+      <ProjectShowcase :projects="projects" />
 
       <section id="expertise" class="content-section">
         <p class="eyebrow">Expertise</p>
