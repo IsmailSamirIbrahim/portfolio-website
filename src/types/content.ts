@@ -17,6 +17,7 @@ export interface SocialLink {
 export interface ContactDetails {
   email: string
   emailHref: MailLink
+  resume: NavigationItem
   social: readonly SocialLink[]
 }
 

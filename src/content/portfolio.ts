@@ -25,6 +25,10 @@ export const portfolioContent = {
   contact: {
     email: 'ismail.samir.ibrahim@gmail.com',
     emailHref: 'mailto:ismail.samir.ibrahim@gmail.com',
+    resume: {
+      label: 'Résumé / experience',
+      href: '#expertise',
+    },
     social: [
       {
         label: 'GitHub',

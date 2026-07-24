@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import HeroIntroduction from '@/components/HeroIntroduction.vue'
 import ProjectShowcase from '@/components/ProjectShowcase.vue'
+import ContactCollaboration from '@/components/ContactCollaboration.vue'
 import SiteFooter from '@/components/SiteFooter.vue'
 import SiteHeader from '@/components/SiteHeader.vue'
 import { portfolioContent } from '@/content/portfolio'
@@ -50,21 +51,7 @@ const projects = portfolioContent.projects
         </div>
       </section>
 
-      <section id="contact" class="contact-section">
-        <div>
-          <p class="eyebrow">Collaboration</p>
-          <h2>Let’s build dependable software together.</h2>
-        </div>
-        <div class="contact-section__actions">
-          <a class="button button--primary" href="mailto:ismail.samir.ibrahim@gmail.com">
-            Email Ismail
-          </a>
-          <a class="button" href="https://github.com/IsmailSamirIbrahim">GitHub</a>
-          <a class="button" href="https://www.linkedin.com/in/ismailsamiribrahim">
-            LinkedIn
-          </a>
-        </div>
-      </section>
+      <ContactCollaboration />
     </main>
 
     <SiteFooter />
